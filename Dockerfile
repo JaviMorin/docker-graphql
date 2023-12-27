@@ -2,6 +2,7 @@
 FROM node:19-alpine3.15 as dev-deps
 WORKDIR /app
 COPY package.json package.json
+RUN yarn config set "strict-ssl" false -g
 RUN yarn install --frozen-lockfile
 
 
@@ -15,6 +16,7 @@ RUN yarn build
 FROM node:19-alpine3.15 as prod-deps
 WORKDIR /app
 COPY package.json package.json
+RUN yarn config set "strict-ssl" false -g
 RUN yarn install --prod --frozen-lockfile
 
 
