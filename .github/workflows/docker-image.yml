@@ -32,7 +32,7 @@ jobs:
 
     - name: Push docker image
       run:  |
-        docker push sala2117/docker-graphql:0.0.2 .
+        docker push sala2117/docker-graphql:0.0.2
         
         
 #    - name: Build the Docker image
