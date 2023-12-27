@@ -29,10 +29,12 @@ jobs:
     - name: Build docker image
       run:  |
         docker build --tag sala2117/docker-graphql:0.0.2 .
+        docker build --tag sala2117/docker-graphql:latest .
 
     - name: Push docker image
       run:  |
         docker push sala2117/docker-graphql:0.0.2
+        docker push sala2117/docker-graphql:latest
         
         
 #    - name: Build the Docker image
